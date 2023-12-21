@@ -1,0 +1,12 @@
+kind: Kustomization
+bases:
+  - ../../base
+namePrefix: local-
+commonLabels:
+  app: todonodejs-local
+images:
+  - name: todo
+    newName: quay.io/redhattraining/todo-single
+    newTag: v1.0
+resources:
+- route.yaml
