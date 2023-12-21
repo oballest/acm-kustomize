@@ -1,15 +1,15 @@
 kind: Kustomization
 bases:
   - ../../base
-namePrefix: local-
+namePrefix: mng-
 commonLabels:
-  app: todonodejs-local
+  app: todonodejs-mng
 images:
   - name: todo
     newName: quay.io/redhattraining/todo-single
-    newTag: v1.0
+    newTag: v1.1
   - name: mysql
     newName: registry.redhat.io/rhel8/mysql-80
-    newTag: 1-156
+    newTag: 1-152
 resources:
 - route.yaml
